@@ -1,0 +1,1 @@
+insert into users (id, username, email, phone) values ('1', 'Test Vinny Puh', 'vinny_puh@domain.net', '9001234560');

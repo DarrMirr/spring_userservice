@@ -1,0 +1,120 @@
+{
+	"variables": [],
+	"info": {
+		"name": "UserRequestCollection",
+		"_postman_id": "e57f78ea-9797-305c-3f51-150b465ba2d3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user by id, error response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": "http://localhost:8080/user-service-spring/users/1234",
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create user, invalid id field",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":1,\"username\":\"Vinny Puh\",\"email\":\"vinny_puh@domain.net\",\"phone\":\"9001234560\"}"
+				},
+				"url": "http://localhost:8080/user-service-spring/users",
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "get status by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": "http://localhost:8080/user-service-spring/users/1/status",
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "change user status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"userStatus\":\"online\"}"
+				},
+				"url": "http://localhost:8080/user-service-spring/users/1/status",
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create user, invalid request body",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"usernae\":\"Vinny Puh\",\"email\":\"vinny_puh@domain.n\",\"phone\":\"9001234560\"}"
+				},
+				"url": "http://localhost:8080/user-service-spring/users",
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "create user, valid request",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\":\"Vinny Puh\",\"email\":\"vinny_puh@domain.net\",\"phone\":\"9001234560\"}"
+				},
+				"url": "http://localhost:8080/user-service-spring/users",
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "user by id, valid response",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": "http://localhost:8080/user-service-spring/users/1",
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
